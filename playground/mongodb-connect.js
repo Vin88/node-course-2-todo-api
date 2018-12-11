@@ -11,19 +11,11 @@ MongoClient.connect(url+ '/TodoApp', {useNewUrlParser: true}, (err, client) => {
     console.log("Connected to Mongodb server");
 
     const db = client.db('TodoApp');
-    // db.collection('Todos').insertOne({
-    //     text: "Something to do",
-    //     completed: false
-    // }, (err, result) => {
-    //     if(err){
-    //         console.log("Unable to insert")
-    //     }
-    //     console.log(JSON.stringify(result.ops, undefined, 2));
-    // })
-
+    // TodoApp - Database
+    // Users - Collection
     db.collection('Users').insertOne({
-        name: "Vinothini",
-        age: "26",
+        name: "Vinothi",
+        age: "28",
         location: "Bangalore"
     }, (err, result) => {
         if(err){
